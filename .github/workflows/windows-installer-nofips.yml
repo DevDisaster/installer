@@ -80,7 +80,7 @@ jobs:
     - name: config x32
       working-directory: openssl/_build32
       run: |
-        perl ..\Configure --banner=Configured no-makedepend enable-fips VC-WIN32 -DOSSL_WINCTX=openssl
+        perl ..\Configure --banner=Configured no-makedepend VC-WIN32 -DOSSL_WINCTX=openssl
         perl configdata.pm --dump
     - name: build x32 binaries
       working-directory: openssl/_build32
