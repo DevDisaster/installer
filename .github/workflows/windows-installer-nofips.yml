@@ -90,7 +90,7 @@ jobs:
       run: nmake /S DESTDIR=..\_install32 install
     - name: build installer
       working-directory: windows-installer
-      run:  nmake INSTMAJOR=${{ github.event.inputs.major }} INSTMINOR=${{ github.event.inputs.minor }} INSTPATCH=${{ github.event.inputs.patch }} INSTCTX=openssl INSTBUILD32=../openssl/_install32 INSTBUILD64=../openssl/_install64 INSTLICENSE=../openssl/LICENSE.txt openssl-installer
+      run:  nmake INSTMAJOR=${{ github.event.inputs.major }} INSTMINOR=${{ github.event.inputs.minor }} INSTPATCH=${{ github.event.inputs.patch }} INSTCTX=openssl INSTBUILD32=../openssl/_install32 INSTBUILD64=../openssl/_install64 INSTLICENSE=../openssl/LICENSE openssl-installer
     - name: Upload installer as artifact
       uses: actions/upload-artifact@v4
       with:
