@@ -96,7 +96,6 @@ SectionEnd
 
 !insertmacro MUI_PAGE_WELCOME
 
-!define LICENSE_FILE "../openssl/LICENSE.txt"
 !insertmacro MUI_PAGE_LICENSE ${LICENSE_FILE}
 
 Function CheckRunUninstaller
